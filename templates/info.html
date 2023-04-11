@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+Опубликованные статьи
+{% endblock %}
+{% block content %}
+<div class="container">
+    <h1  style="text-align:center;background-color: #EEDDFF;border: 2px solid black;border-radius: 25px; widht:150px;">Статьи на сайте</h1>
+
+    {% for el in articles %}
+    <div class="container">
+    <div class="container">
+    <div class="alert alert-info">
+        <h2>{{ el.title }}</h2>
+        <p>{{ el.intro }}</p>
+        <p><b>Дата публикации: {{ el.data.date() }}</b></p>
+        <a href="/info/{{el.id}}" class="btn btn-warning">Подробнее</a>
+
+    </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
