@@ -7,8 +7,9 @@
     <h1  style="text-align:center;background-color: #EEDDFF;border: 2px solid black;border-radius: 25px; widht:150px;">{{ article.title }}</h1>
 
     <div class=" alert alert-info">
+        <h1>{{ article.title }}</h1>
+        <h3>{{ article.intro }}</h3>
         <p>{{ article.text }}</p>
-
         <a href="/info/{{article.id}}/del" class="btn btn-warning">Удалить</a>
         <a href="/info/{{article.id}}/update" class="btn btn-warning">Редактировать</a>
     </div>
