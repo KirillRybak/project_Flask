@@ -63,7 +63,7 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/info/<int:id>/update>', methods=['POST','GET'])
+@app.route('/info/<int:id>/update', methods=['POST','GET'])
 def create_update(id):
     if request.method == 'POST':
         title = request.form['title']
